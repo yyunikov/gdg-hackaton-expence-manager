@@ -2,6 +2,7 @@ package ua.angrybeavers.material.em.ui.activities;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.transition.Explode;
 import android.view.MenuItem;
@@ -36,6 +37,14 @@ public class ExpenseDetailsActivity extends Activity {
             @Override
             public void onClick(View view) {
 
+            }
+        });
+
+        findViewById(R.id.btnAddExpense).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), NewExpenseActivity.class);
+                startActivity(intent);
             }
         });
     }
