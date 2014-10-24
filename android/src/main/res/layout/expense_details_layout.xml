@@ -11,8 +11,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/darker_gray"
-
         android:gravity="center">
 
         <Button
@@ -210,7 +208,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/darker_gray"
         android:layout_below="@+id/personal_expense_details_line_3"
         android:gravity="center">
 
@@ -376,7 +373,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/darker_gray"
         android:layout_below="@+id/personal_expense_details_week_text_content_4"
         android:gravity="center">
 
