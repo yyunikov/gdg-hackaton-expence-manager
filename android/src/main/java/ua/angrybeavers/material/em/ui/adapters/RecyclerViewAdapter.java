@@ -15,12 +15,16 @@
  */
 package ua.angrybeavers.material.em.ui.adapters;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import ua.angrybeavers.material.em.R;
+import ua.angrybeavers.material.em.ui.activities.ExpenseDetailsActivity;
 import ua.angrybeavers.material.em.ui.items.RecyclerViewItem;
 
 import java.util.List;
@@ -28,11 +32,13 @@ import java.util.List;
 /**
  * @author yyunikov
  */
-public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     private List<RecyclerViewItem> mDataset;
+    private Activity activity;
 
-    static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView mTitleView;
 
@@ -49,18 +55,29 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
         @Override
         public void onClick(final View view) {
             // dummy onClick
+            showExpenseDetails();
+        }
+
+    }
+
+    private void showExpenseDetails() {
+        if (this.activity != null) {
+            Intent intent = new Intent(activity, ExpenseDetailsActivity.class);
+            this.activity.startActivity(intent);
         }
     }
 
+
     // Provide a suitable constructor (depends on the kind of dataset)
-    public RecyclerViewAdapter(final List<RecyclerViewItem> dataset) {
+    public RecyclerViewAdapter(final List<RecyclerViewItem> dataset, Activity activity) {
         mDataset = dataset;
+        this.activity = activity;
     }
 
     // Create new views (invoked by the layout manager)
     @Override
     public RecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                   int viewType) {
+                                                             int viewType) {
         // create a new view
         final View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_list_two_line, parent, false);

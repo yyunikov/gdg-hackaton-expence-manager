@@ -120,7 +120,7 @@ public class AccountActivity extends BaseActivity {
         protected void onPostExecute(final List<RecyclerViewItem> aVoid) {
             super.onPostExecute(aVoid);
 
-            final RecyclerView.Adapter adapter = new RecyclerViewAdapter(aVoid);
+            RecyclerView.Adapter adapter = new RecyclerViewAdapter(aVoid,AccountActivity.this);
             recyclerView.setAdapter(adapter);
             setProgressBarVisible(false);
         }

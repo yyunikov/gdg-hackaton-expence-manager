@@ -25,6 +25,8 @@
                   android:screenOrientation="portrait"/>
         <activity android:name=".ui.activities.ActivityTransitionStage"
                   android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activities.ExpenseDetailsActivity"
+                  android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
