@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/main_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/darker_gray"
+
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/personal_expense_details_summary_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/black"
+            android:text="Summary"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/personal_expense_details_budget_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@id/personal_expense_details_summary_btn"
+            android:background="@android:color/holo_red_dark"
+            android:text="Budget"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/personal_expense_details_budget_btn"
+            android:background="@android:color/holo_green_dark"
+            android:text="Activity"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/personal_expense_details_line"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/main_button_layout"
+        android:background="@android:color/white" />
+
+    <GridLayout
+        android:id="@+id/personal_expense_details_text_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/personal_expense_details_line"
+        android:layout_centerVertical="true"
+        android:background="@android:color/darker_gray"
+        android:gravity="left">
+
+        <TextView
+            android:id="@+id/personal_expense_details_current_balance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:paddingLeft="20dp"
+            android:text="Current Balance"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+
+        <TextView
+            android:id="@+id/personal_expense_details_current_balance_num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/personal_expense_details_current_balance_text"
+            android:text="0.00"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="bold"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+
+
+        <TextView
+            android:id="@+id/personal_expense_details_month_current_balance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:paddingLeft="20dp"
+            android:text="This month Balance "
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/personal_expense_details__month_current_balance_num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/personal_expense_details_month_current_balance_text"
+            android:text="0.00"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="bold"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+    </GridLayout>
+
+    <View
+        android:id="@+id/personal_expense_details_line_2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/personal_expense_details_text_content"
+        android:background="@android:color/white" />
+
+
+    <GridLayout
+        android:id="@+id/personal_expense_details_week_text_content"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/personal_expense_details_line_2"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/personal_expense_details_week_current_balance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:text="This Week Income"
+            android:layout_gravity="center"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+
+        <TextView
+            android:id="@+id/personal_expense_details_week_current_balance_num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/personal_expense_details_week_current_balance_text"
+            android:paddingLeft="10dp"
+            android:text="0.00"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="bold"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <TextView
+            android:id="@+id/personal_expense_details_week_current_balance_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:text="This Week Income"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/personal_expense_details_week_current_balance_text"
+            android:paddingLeft="10dp"
+            android:text="0.00"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="bold"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:text="Year Date Income"
+            android:layout_row="2"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/personal_expense_details_week_current_balance_text"
+            android:paddingLeft="10dp"
+            android:text="0.00"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="bold"
+            android:layout_row="2"
+            android:layout_column="1" />
+
+    </GridLayout>
+
+    <View
+        android:id="@+id/personal_expense_details_line_3"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/personal_expense_details_week_text_content"
+        android:background="@android:color/white" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/main_button_layout_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/personal_expense_details_line_3"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/personal_expense_details_summary_btn_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/black"
+            android:text="Recruting"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/personal_expense_details_budget_btn_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@id/personal_expense_details_summary_btn_2"
+            android:background="@android:color/holo_red_dark"
+            android:text="Income"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/personal_expense_details_budget_btn_2"
+            android:background="@android:color/holo_green_dark"
+            android:text="Expense"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+
+
+    <View
+        android:id="@+id/personal_expense_details_line_3_4"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/main_button_layout_2"
+        android:background="@android:color/white" />
+
+    <GridLayout
+        android:id="@+id/personal_expense_details_week_text_content_4"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/personal_expense_details_line_3_4"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/personal_expense_details_week_current_balance_text_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:text="Today Expense"
+            android:layout_gravity="center"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+
+        <TextView
+            android:id="@+id/personal_expense_details_week_current_balance_num_text_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/personal_expense_details_week_current_balance_text"
+            android:paddingLeft="10dp"
+            android:text="0.00"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <TextView
+            android:id="@+id/personal_expense_details_week_current_balance_text_2_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:text="This Week Income"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/textView2_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/personal_expense_details_week_current_balance_text"
+            android:paddingLeft="10dp"
+            android:text="0.00"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:text="Year Date Income"
+            android:layout_row="2"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/personal_expense_details_week_current_balance_text"
+            android:paddingLeft="10dp"
+            android:text="0.00"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:layout_row="2"
+            android:layout_column="1" />   <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
+        android:text="Year Date Income"
+        android:layout_row="2"
+        android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/personal_expense_details_week_current_balance_text"
+            android:paddingLeft="10dp"
+            android:text="0.00"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:layout_row="2"
+            android:layout_column="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:text="Year to Date Expense"
+            android:layout_row="3"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/personal_expense_details_week_current_balance_text"
+            android:paddingLeft="10dp"
+            android:text="0.00"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:layout_row="3"
+            android:layout_column="1" />
+
+    </GridLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/main_button_layout_2_5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/personal_expense_details_week_text_content_4"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/personal_expense_details_summary_btn_2_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/black"
+            android:text="Calendar"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/personal_expense_details_budget_btn_2_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@id/personal_expense_details_summary_btn_2_5"
+            android:background="@android:color/holo_red_dark"
+            android:text="Chart"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/personal_expense_details_budget_btn_2_5"
+            android:background="@android:color/holo_green_dark"
+            android:text="Transfet"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
