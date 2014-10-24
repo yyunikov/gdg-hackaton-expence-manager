@@ -54,7 +54,7 @@
 
     <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
         <item name="android:windowEnterAnimation">@anim/anim_slide_right_bottom_in</item>
-        <!--<item name="android:windowExitAnimation">@anim/anim_out</item>-->
+        <item name="android:windowExitAnimation">@anim/anim_slide_right_bottom_out</item>
     </style>
 
 </resources>

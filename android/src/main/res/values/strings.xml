@@ -37,4 +37,6 @@
     <string name="initial_balance">Initial Balance</string>
     <string name="auto_and_mileage">Auto and Mileage</string>
 
+    <string name="new_expense">New Expense</string>
+
 </resources>
