@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AngryB.Theme.Light">
         <activity
-            android:name=".ui.activities.NewExpensesTestActivity"
+            android:name=".ui.activities.AccountActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
 
