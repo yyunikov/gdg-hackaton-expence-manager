@@ -24,6 +24,7 @@
         android:id="@+id/drawer_item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:ellipsize="end"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"

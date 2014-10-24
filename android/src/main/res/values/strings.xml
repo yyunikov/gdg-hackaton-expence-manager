@@ -21,4 +21,10 @@
 
     <string name="btn_next_screen">Go to next screen</string>
 
+    <string name="activity_about">About</string>
+
+    <string name="about_team_name">Angry Beavers</string>
+
+    <string name="about_info">Specially for GDG Lviv Hackaday 2014</string>
+
 </resources>

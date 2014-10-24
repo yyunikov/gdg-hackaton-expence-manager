@@ -15,8 +15,32 @@
  */
 package ua.angrybeavers.material.em.ui.activities;
 
+import android.app.ActionBar;
+import android.os.Bundle;
+import ua.angrybeavers.material.em.R;
+
 /**
  * @author yyunikov
  */
 public class AboutActivity extends BaseActivity {
+
+    @Override
+    protected void onCreate(final Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_about);
+        setupActionBar();
+
+        setupDrawer();
+    }
+
+    @Override
+    protected void setupActionBar() {
+        super.setupActionBar();
+        final ActionBar actionBar = getActionBar();
+
+        if (actionBar != null) {
+            actionBar.setTitle(R.string.activity_about);
+        }
+    }
 }

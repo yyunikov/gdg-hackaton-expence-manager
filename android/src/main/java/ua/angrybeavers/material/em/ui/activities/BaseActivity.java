@@ -170,6 +170,9 @@ public abstract class BaseActivity extends Activity {
                     intent = new Intent(BaseActivity.this, AccountActivity.class).
                             addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK
                                     | Intent.FLAG_ACTIVITY_SINGLE_TOP); break;
+                case 5:
+                    intent = new Intent(BaseActivity.this, AboutActivity.class).
+                            addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP); break;
                 default:
                     intent = null;
                     break;
