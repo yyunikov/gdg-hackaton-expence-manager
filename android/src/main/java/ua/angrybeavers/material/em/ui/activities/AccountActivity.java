@@ -41,7 +41,7 @@ public class AccountActivity extends BaseActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_recycler_view);
+        setContentView(R.layout.activity_account);
         setupActionBar();
 
         setupDrawer();

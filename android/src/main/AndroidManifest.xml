@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.activities.AboutActivity"
+                  android:screenOrientation="portrait"/>
         <activity android:name=".ui.activities.ActivityTransition"
                   android:screenOrientation="portrait"/>
         <activity android:name=".ui.activities.ActivityTransitionStage"

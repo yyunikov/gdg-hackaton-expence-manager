@@ -3,7 +3,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.RecyclerViewActivity">
+    tools:context=".ui.activities.AccountActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical"
-            tools:context=".ui.activities.RecyclerViewActivity"
+            tools:context=".ui.activities.AccountActivity"
             tools:listitem="@layout/item_list_two_line" />
 
         <ImageButton
