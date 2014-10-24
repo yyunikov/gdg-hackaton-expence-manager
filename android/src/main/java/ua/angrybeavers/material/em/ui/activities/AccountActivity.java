@@ -20,6 +20,7 @@ import android.app.FragmentTransaction;
 import android.graphics.Outline;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -29,6 +30,7 @@ import ua.angrybeavers.material.em.R;
 import ua.angrybeavers.material.em.storage.Storage;
 import ua.angrybeavers.material.em.ui.adapters.RecyclerViewAdapter;
 import ua.angrybeavers.material.em.ui.fragments.dialogs.NewExpenseGroupDialog;
+import ua.angrybeavers.material.em.ui.items.DividerItemDecoration;
 import ua.angrybeavers.material.em.ui.items.RecyclerViewItem;
 
 public class AccountActivity extends BaseActivity implements NewExpenseGroupDialog.OnAddClickListener {
@@ -54,6 +56,9 @@ public class AccountActivity extends BaseActivity implements NewExpenseGroupDial
 
     private void setupRecyclerView() {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
