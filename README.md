@@ -1,7 +1,7 @@
-Hello Material Design
+Expense Manager Redesign for GDG Ukraine Hackaday 2014
 =====================
 
-Under development. Simple example of using material design in Android L.
+Mockup of redesigning Expense Manager application to material design.
 
 License
 =================
