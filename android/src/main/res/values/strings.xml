@@ -34,7 +34,7 @@
     <string name="name">Name</string>
     <string name="description">Description</string>
     <string name="currency">Currency</string>
-    <string name="initial_balance">Description</string>
+    <string name="initial_balance">Initial Balance</string>
     <string name="auto_and_mileage">Auto and Mileage</string>
 
 </resources>
