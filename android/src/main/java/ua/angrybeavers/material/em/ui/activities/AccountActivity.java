@@ -35,6 +35,8 @@ public class AccountActivity extends BaseActivity {
 
     private static final int DATASET_SIZE = 1000;
 
+    private final List<RecyclerViewItem> recyclerViewItems = new ArrayList<>();
+
     private RecyclerView recyclerView;
 
     @Override
@@ -126,8 +128,6 @@ public class AccountActivity extends BaseActivity {
         }
 
         private List<RecyclerViewItem> createDataSet() {
-            final List<RecyclerViewItem> recyclerViewItems = new ArrayList<>();
-
             recyclerViewItems.add(new RecyclerViewItem("Personal Expense", "Current Balance: "));
 
             return recyclerViewItems;
