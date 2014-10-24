@@ -3,18 +3,17 @@ package ua.angrybeavers.material.em.ui.activities;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
+import android.transition.Slide;
 import android.view.MenuItem;
-
 import ua.angrybeavers.material.em.R;
 
-/**
- * Created by vyatsykiv on 24.10.2014.
- */
 public class NewExpenseActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setEnterTransition(new Slide());
+        getWindow().setExitTransition(new Slide());
         setContentView(R.layout.activity_new_expense);
 
         initActionBar();
@@ -40,6 +39,4 @@ public class NewExpenseActivity extends Activity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle(R.string.new_expense);
     }
-
-
 }

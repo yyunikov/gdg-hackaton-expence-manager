@@ -10,9 +10,6 @@ import android.widget.Button;
 
 import ua.angrybeavers.material.em.R;
 
-/**
- * Created by vasylpirus on 24.10.14.
- */
 public class ExpenseDetailsActivity extends Activity {
 
     @Override
@@ -23,29 +20,25 @@ public class ExpenseDetailsActivity extends Activity {
         getWindow().setExitTransition(new Explode());
         setContentView(R.layout.expense_details_layout);
 
-
         setupActionBar();
 
 
-        Button _buttonSummary = (Button) findViewById(R.id.personal_expense_details_summary_btn);
-        _buttonSummary.setOnClickListener(new View.OnClickListener() {
+        Button buttonSummary = (Button) findViewById(R.id.personal_expense_details_summary_btn);
+        buttonSummary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
         });
 
-        Button _buttonBudget = (Button) findViewById(R.id.personal_expense_details_budget_btn);
-        _buttonSummary.setOnClickListener(new View.OnClickListener() {
+        Button buttonBudget = (Button) findViewById(R.id.personal_expense_details_budget_btn);
+        buttonSummary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
         });
-
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -64,8 +57,4 @@ public class ExpenseDetailsActivity extends Activity {
             actionBar.setTitle(R.string.app_name);
         }
     }
-
-
-
-
 }
