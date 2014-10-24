@@ -3,7 +3,7 @@ package ua.angrybeavers.material.em.ui.drawer;
 import android.content.Context;
 import android.graphics.*;
 import android.graphics.drawable.Drawable;
-import ua.angrybeavers.material.R;
+import ua.angrybeavers.material.em.R;
 
 /**
  * @see <a href="https://github.com/ikimuhendis/LDrawer/blob/master/library/src/main/java/com/ikimuhendis/ldrawer/DrawerArrowDrawable.java">original source on GitHub</a>

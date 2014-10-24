@@ -21,7 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import ua.angrybeavers.material.R;
+import ua.angrybeavers.material.em.R;
 import ua.angrybeavers.material.em.ui.items.DrawerItem;
 import ua.angrybeavers.material.em.ui.items.DrawerItemPrimary;
 

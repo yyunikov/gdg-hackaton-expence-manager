@@ -16,7 +16,7 @@
 package ua.angrybeavers.material.em.ui.items;
 
 
-import ua.angrybeavers.material.R;
+import ua.angrybeavers.material.em.R;
 
 /**
  * @author yyunikov

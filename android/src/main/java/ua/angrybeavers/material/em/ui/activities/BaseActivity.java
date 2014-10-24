@@ -26,7 +26,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import ua.angrybeavers.material.R;
+import ua.angrybeavers.material.em.R;
 import ua.angrybeavers.material.em.ui.adapters.NavigationDrawerAdapter;
 import ua.angrybeavers.material.em.ui.drawer.ActionBarDrawerToggle;
 import ua.angrybeavers.material.em.ui.drawer.DrawerArrowDrawable;

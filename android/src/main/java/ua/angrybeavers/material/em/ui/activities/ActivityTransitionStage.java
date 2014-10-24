@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.transition.Explode;
 import android.view.MenuItem;
-import ua.angrybeavers.material.R;
+import ua.angrybeavers.material.em.R;
 
 public class ActivityTransitionStage extends Activity {
 

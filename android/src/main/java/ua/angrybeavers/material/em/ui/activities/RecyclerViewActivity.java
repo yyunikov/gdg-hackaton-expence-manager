@@ -23,7 +23,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
-import ua.angrybeavers.material.R;
+import ua.angrybeavers.material.em.R;
 import ua.angrybeavers.material.em.ui.adapters.RecyclerViewAdapter;
 import ua.angrybeavers.material.em.ui.items.RecyclerViewItem;
 

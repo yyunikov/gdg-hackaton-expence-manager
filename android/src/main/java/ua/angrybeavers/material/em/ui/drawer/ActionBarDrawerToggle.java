@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import ua.angrybeavers.material.R;
+import ua.angrybeavers.material.em.R;
 
 import java.lang.reflect.Method;
 
