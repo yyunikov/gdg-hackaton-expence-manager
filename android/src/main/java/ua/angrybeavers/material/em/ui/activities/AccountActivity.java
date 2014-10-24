@@ -102,9 +102,9 @@ public class AccountActivity extends BaseActivity implements NewExpenseGroupDial
 
     @Override
     public void onAddClick(final String name, final String description) {
-        Storage.getInstance().getListItems().add(new RecyclerViewItem(name, description));
+        Storage.getInstance().getListItems().add(0, new RecyclerViewItem(name, description));
 
-        adapter.notifyDataSetChanged();
+        adapter.notifyItemInserted(0);
     }
 
     private class InitializingTask extends AsyncTask<Void, Void, Void> {
