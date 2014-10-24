@@ -6,9 +6,11 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -33,7 +35,7 @@ public class NewExpenseGroupDialog extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.NewExpensesGroupTheme);
 
         builder.setTitle(R.string.new_expenses_group);
 
@@ -51,7 +53,9 @@ public class NewExpenseGroupDialog extends DialogFragment {
             }
         });
 
+        DisplayMetrics dMetrics = getResources().getDisplayMetrics();
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_new_expenses_group, null);
+        view.setMinimumWidth((int)(dMetrics.widthPixels * 0.8f));
 
         Spinner spinCurrency = (Spinner) view.findViewById(R.id.spinCurrency);
         Spinner spinAutoAndMileage = (Spinner) view.findViewById(R.id.spinAutoAndMileage);
@@ -61,7 +65,10 @@ public class NewExpenseGroupDialog extends DialogFragment {
 
         builder.setView(view);
 
-        return builder.create();
+        Dialog dialog = builder.create();
+        dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+        return dialog;
     }
 
     private void initSpinner(Spinner spinner, String[] items) {

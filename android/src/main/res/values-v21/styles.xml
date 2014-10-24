@@ -48,9 +48,13 @@
         <item name="android:textSize">@dimen/action_bar_text_size</item>
     </style>
 
-    <style name="TransitionDialogAnimation">
-        <item name="android:windowEnterAnimation">@anim/zoom_in_from_left_corner</item>
-        <item name="android:windowExitAnimation">@anim/zoom_out_from_left_corner</item>
+    <style name="NewExpensesGroupTheme" parent="android:Theme.Material.Light.Panel">
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+    </style>
+
+    <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/anim_slide_right_bottom_in</item>
+        <!--<item name="android:windowExitAnimation">@anim/anim_out</item>-->
     </style>
 
 </resources>

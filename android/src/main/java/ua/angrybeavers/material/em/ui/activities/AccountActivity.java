@@ -86,7 +86,6 @@ public class AccountActivity extends BaseActivity {
             @Override
             public void onClick(final View view) {
                 FragmentTransaction fTransaction = getFragmentManager().beginTransaction();
-                //fTransaction.setCustomAnimations(R.anim.zoom_in_from_left_corner, R.anim.zoom_out_from_left_corner);
                 fTransaction.add(new NewExpenseGroupDialog(), NewExpenseGroupDialog.TAG);
                 fTransaction.commitAllowingStateLoss();
             }
