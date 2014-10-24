@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ua.angrybeavers.material.ui.adapters;
+package ua.angrybeavers.material.em.ui.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -22,8 +22,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import ua.angrybeavers.material.R;
-import ua.angrybeavers.material.ui.items.DrawerItem;
-import ua.angrybeavers.material.ui.items.DrawerItemPrimary;
+import ua.angrybeavers.material.em.ui.items.DrawerItem;
+import ua.angrybeavers.material.em.ui.items.DrawerItemPrimary;
 
 /**
  * @author yyunikov

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ua.angrybeavers.material.ui.activities;
+package ua.angrybeavers.material.em.ui.activities;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -27,10 +27,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import ua.angrybeavers.material.R;
-import ua.angrybeavers.material.ui.adapters.NavigationDrawerAdapter;
-import ua.angrybeavers.material.ui.drawer.ActionBarDrawerToggle;
-import ua.angrybeavers.material.ui.drawer.DrawerArrowDrawable;
-import ua.angrybeavers.material.ui.items.DrawerItemPrimary;
+import ua.angrybeavers.material.em.ui.adapters.NavigationDrawerAdapter;
+import ua.angrybeavers.material.em.ui.drawer.ActionBarDrawerToggle;
+import ua.angrybeavers.material.em.ui.drawer.DrawerArrowDrawable;
+import ua.angrybeavers.material.em.ui.items.DrawerItemPrimary;
 
 /**
  * @author yyunikov

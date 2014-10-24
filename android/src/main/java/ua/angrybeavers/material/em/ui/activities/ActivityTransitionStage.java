@@ -1,4 +1,4 @@
-package ua.angrybeavers.material.ui.activities;
+package ua.angrybeavers.material.em.ui.activities;
 
 import android.app.ActionBar;
 import android.app.Activity;

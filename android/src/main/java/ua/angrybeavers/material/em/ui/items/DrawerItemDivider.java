@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ua.angrybeavers.material.ui.items;
+package ua.angrybeavers.material.em.ui.items;
 
 
 import ua.angrybeavers.material.R;

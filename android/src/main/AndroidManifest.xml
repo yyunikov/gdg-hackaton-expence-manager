@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ua.angrybeavers.material" >
+    package="ua.angrybeavers.material.em" >
 
     <application
         android:allowBackup="true"

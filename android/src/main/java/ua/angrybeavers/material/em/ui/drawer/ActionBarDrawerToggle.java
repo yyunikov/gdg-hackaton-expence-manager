@@ -1,4 +1,4 @@
-package ua.angrybeavers.material.ui.drawer;
+package ua.angrybeavers.material.em.ui.drawer;
 
 import android.app.ActionBar;
 import android.app.Activity;

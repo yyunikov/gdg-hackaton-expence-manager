@@ -13,24 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ua.angrybeavers.material.ui.items;
-
-
-import ua.angrybeavers.material.R;
+package ua.angrybeavers.material.em.ui.items;
 
 /**
  * @author yyunikov
  */
-public class DrawerItemPrimary extends DrawerItem {
+public class RecyclerViewItem {
 
-    public final String mTitle;
+    public String mTitle;
 
-    public DrawerItemPrimary(final String title) {
+    public String mSubTitle;
+
+    public RecyclerViewItem(final String title, final String subTitle) {
         mTitle = title;
+        mSubTitle = subTitle;
     }
 
-    @Override
-    public int getLayout() {
-        return R.layout.item_drawer_primary;
+    public String getTitle() {
+        return mTitle;
     }
+
+    public String getSubTitle() {
+        return mSubTitle;
+    }
+
+
 }

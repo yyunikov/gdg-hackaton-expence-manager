@@ -13,31 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ua.angrybeavers.material.ui.items;
-
-import android.widget.ImageView;
+package ua.angrybeavers.material.em.ui.items;
 
 /**
  * @author yyunikov
  */
-public class RecyclerViewItem {
+public abstract class DrawerItem {
 
-    public String mTitle;
-
-    public String mSubTitle;
-
-    public RecyclerViewItem(final String title, final String subTitle) {
-        mTitle = title;
-        mSubTitle = subTitle;
-    }
-
-    public String getTitle() {
-        return mTitle;
-    }
-
-    public String getSubTitle() {
-        return mSubTitle;
-    }
-
-
+    public abstract int getLayout();
 }

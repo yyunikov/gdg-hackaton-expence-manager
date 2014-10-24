@@ -17,7 +17,7 @@ android {
     buildToolsVersion "20.0.0"
 
     defaultConfig {
-        applicationId "ua.angrybeavers.material"
+        applicationId "ua.angrybeavers.material.em"
         minSdkVersion 'L'
         targetSdkVersion 'L'
         versionCode 1

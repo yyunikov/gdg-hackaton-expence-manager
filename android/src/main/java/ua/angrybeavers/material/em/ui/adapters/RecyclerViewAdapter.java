@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ua.angrybeavers.material.ui.adapters;
+package ua.angrybeavers.material.em.ui.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -21,7 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import ua.angrybeavers.material.R;
-import ua.angrybeavers.material.ui.items.RecyclerViewItem;
+import ua.angrybeavers.material.em.ui.items.RecyclerViewItem;
 
 import java.util.List;
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ua.angrybeavers.material.ui.activities;
+package ua.angrybeavers.material.em.ui.activities;
 
 import android.graphics.Outline;
 import android.os.AsyncTask;
@@ -24,8 +24,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import ua.angrybeavers.material.R;
-import ua.angrybeavers.material.ui.adapters.RecyclerViewAdapter;
-import ua.angrybeavers.material.ui.items.RecyclerViewItem;
+import ua.angrybeavers.material.em.ui.adapters.RecyclerViewAdapter;
+import ua.angrybeavers.material.em.ui.items.RecyclerViewItem;
 
 import java.util.ArrayList;
 import java.util.List;

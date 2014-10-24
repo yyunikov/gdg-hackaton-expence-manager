@@ -1,4 +1,4 @@
-package ua.angrybeavers.material.ui.activities;
+package ua.angrybeavers.material.em.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;

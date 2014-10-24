@@ -13,12 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ua.angrybeavers.material.ui.items;
+package ua.angrybeavers.material.em.ui.items;
+
+
+import ua.angrybeavers.material.R;
 
 /**
  * @author yyunikov
  */
-public abstract class DrawerItem {
+public class DrawerItemPrimary extends DrawerItem {
 
-    public abstract int getLayout();
+    public final String mTitle;
+
+    public DrawerItemPrimary(final String title) {
+        mTitle = title;
+    }
+
+    @Override
+    public int getLayout() {
+        return R.layout.item_drawer_primary;
+    }
 }
