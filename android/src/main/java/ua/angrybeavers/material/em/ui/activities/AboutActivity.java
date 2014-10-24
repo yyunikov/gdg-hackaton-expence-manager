@@ -15,8 +15,15 @@
  */
 package ua.angrybeavers.material.em.ui.activities;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.app.ActionBar;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.view.ViewAnimationUtils;
+
 import ua.angrybeavers.material.em.R;
 
 /**
@@ -32,6 +39,8 @@ public class AboutActivity extends BaseActivity {
         setupActionBar();
 
         setupDrawer();
+
+        startRevealAnimation();
     }
 
     @Override
@@ -42,5 +51,59 @@ public class AboutActivity extends BaseActivity {
         if (actionBar != null) {
             actionBar.setTitle(R.string.activity_about);
         }
+    }
+
+    private void startRevealAnimation() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        View view = findViewById(R.id.holderAboutInfo);
+                        startShowAnimation(view);
+                    }
+                });
+            }
+        }, 300);
+    }
+
+    private void startShowAnimation(final View view) {
+        DisplayMetrics dMetrics = getResources().getDisplayMetrics();
+        int screenHeight = dMetrics.heightPixels;
+        int screenWidth = dMetrics.widthPixels;
+
+        int cx = screenWidth / 2;
+        int cy = screenHeight / 2;
+
+        Animator anim = ViewAnimationUtils.createCircularReveal(view, cx, cy, 0, screenHeight);
+        anim.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                super.onAnimationStart(animation);
+
+                view.setVisibility(View.VISIBLE);
+            }
+        });
+        anim.setDuration(700);
+        anim.start();
+    }
+
+    private void startHideAnimation(final View view) {
+        int cx = (view.getLeft() + view.getRight()) / 2;
+        int cy = (view.getTop() + view.getBottom()) / 2;
+
+        int initialRadius = view.getWidth();
+
+        Animator anim = ViewAnimationUtils.createCircularReveal(view, cx, cy, initialRadius, 0);
+        anim.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                view.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        anim.start();
     }
 }

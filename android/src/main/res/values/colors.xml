@@ -15,4 +15,6 @@
 
     <color name="drawer_color">#FFFFFF</color>
 
+    <color name="bg_about_activity">#F0F0F0</color>
+
 </resources>

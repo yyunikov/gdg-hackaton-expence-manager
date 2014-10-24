@@ -6,8 +6,11 @@
     tools:context=".ui.activities.AboutActivity">
 
     <RelativeLayout
+        android:id="@+id/holderAboutInfo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/bg_about_activity"
+        android:visibility="gone">
 
         <ImageView android:id="@+id/image_gdg"
                   android:layout_width="100dp"
