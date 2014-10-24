@@ -26,18 +26,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import ua.angrybeavers.material.em.R;
+import ua.angrybeavers.material.em.storage.Storage;
 import ua.angrybeavers.material.em.ui.adapters.RecyclerViewAdapter;
 import ua.angrybeavers.material.em.ui.fragments.dialogs.NewExpenseGroupDialog;
 import ua.angrybeavers.material.em.ui.items.RecyclerViewItem;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class AccountActivity extends BaseActivity {
-
-    private final List<RecyclerViewItem> recyclerViewItems = new ArrayList<>();
+public class AccountActivity extends BaseActivity implements NewExpenseGroupDialog.OnAddClickListener {
 
     private RecyclerView recyclerView;
+
+    private RecyclerView.Adapter adapter;
 
     private View addButton;
 
@@ -102,7 +100,14 @@ public class AccountActivity extends BaseActivity {
         }
     }
 
-    private class InitializingTask extends AsyncTask<Void, Void, List<RecyclerViewItem>> {
+    @Override
+    public void onAddClick(final String name, final String description) {
+        Storage.getInstance().getListItems().add(new RecyclerViewItem(name, description));
+
+        adapter.notifyDataSetChanged();
+    }
+
+    private class InitializingTask extends AsyncTask<Void, Void, Void> {
 
         @Override
         protected void onPreExecute() {
@@ -112,31 +117,27 @@ public class AccountActivity extends BaseActivity {
         }
 
         @Override
-        protected List<RecyclerViewItem> doInBackground(final Void... voids) {
+        protected Void doInBackground(final Void... voids) {
             // intentionally sleeping to show progress bar
             try {
-                Thread.sleep(3000);
+                Thread.sleep(2000);
             } catch (final InterruptedException e) {
                 Log.e(AccountActivity.class.getName(), "Thread was interrupted!");
             }
 
-            return createDataSet();
+            Storage.getInstance().getListItems();
+
+            return null;
         }
 
         @Override
-        protected void onPostExecute(final List<RecyclerViewItem> aVoid) {
+        protected void onPostExecute(final Void aVoid) {
             super.onPostExecute(aVoid);
 
-            RecyclerView.Adapter adapter = new RecyclerViewAdapter(aVoid,AccountActivity.this);
+            adapter = new RecyclerViewAdapter(Storage.getInstance().getListItems(), AccountActivity.this);
             recyclerView.setAdapter(adapter);
             setProgressBarVisible(false);
             addButton.setEnabled(true);
-        }
-
-        private List<RecyclerViewItem> createDataSet() {
-            recyclerViewItems.add(new RecyclerViewItem("Personal Expense", "Current Balance: "));
-
-            return recyclerViewItems;
         }
     }
 }
