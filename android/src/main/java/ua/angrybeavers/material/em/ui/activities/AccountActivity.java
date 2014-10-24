@@ -16,6 +16,7 @@
 package ua.angrybeavers.material.em.ui.activities;
 
 import android.app.ActionBar;
+import android.app.FragmentTransaction;
 import android.graphics.Outline;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import ua.angrybeavers.material.em.R;
 import ua.angrybeavers.material.em.ui.adapters.RecyclerViewAdapter;
+import ua.angrybeavers.material.em.ui.fragments.dialogs.NewExpenseGroupDialog;
 import ua.angrybeavers.material.em.ui.items.RecyclerViewItem;
 
 import java.util.ArrayList;
@@ -33,11 +35,11 @@ import java.util.List;
 
 public class AccountActivity extends BaseActivity {
 
-    private static final int DATASET_SIZE = 1000;
-
     private final List<RecyclerViewItem> recyclerViewItems = new ArrayList<>();
 
     private RecyclerView recyclerView;
+
+    private View addButton;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -48,8 +50,8 @@ public class AccountActivity extends BaseActivity {
 
         setupDrawer();
 
-        setupRecyclerView();
         setupAddButton();
+        setupRecyclerView();
     }
 
     private void setupRecyclerView() {
@@ -77,13 +79,16 @@ public class AccountActivity extends BaseActivity {
         Outline outline = new Outline();
         outline.setOval(0, 0, diameter, diameter);
 
-        final View addButton = findViewById(R.id.add_button);
+        addButton = findViewById(R.id.add_button);
         addButton.setOutline(outline);
         addButton.setClipToOutline(true);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
-
+                FragmentTransaction fTransaction = getFragmentManager().beginTransaction();
+                //fTransaction.setCustomAnimations(R.anim.zoom_in_from_left_corner, R.anim.zoom_out_from_left_corner);
+                fTransaction.add(new NewExpenseGroupDialog(), NewExpenseGroupDialog.TAG);
+                fTransaction.commitAllowingStateLoss();
             }
         });
     }
@@ -104,6 +109,7 @@ public class AccountActivity extends BaseActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             setProgressBarVisible(true);
+            addButton.setEnabled(false);
         }
 
         @Override
@@ -125,6 +131,7 @@ public class AccountActivity extends BaseActivity {
             RecyclerView.Adapter adapter = new RecyclerViewAdapter(aVoid,AccountActivity.this);
             recyclerView.setAdapter(adapter);
             setProgressBarVisible(false);
+            addButton.setEnabled(true);
         }
 
         private List<RecyclerViewItem> createDataSet() {

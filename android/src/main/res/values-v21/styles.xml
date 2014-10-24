@@ -48,4 +48,9 @@
         <item name="android:textSize">@dimen/action_bar_text_size</item>
     </style>
 
+    <style name="TransitionDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/zoom_in_from_left_corner</item>
+        <item name="android:windowExitAnimation">@anim/zoom_out_from_left_corner</item>
+    </style>
+
 </resources>
