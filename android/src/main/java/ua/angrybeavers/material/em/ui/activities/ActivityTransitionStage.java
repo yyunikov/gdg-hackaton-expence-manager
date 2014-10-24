@@ -6,9 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.transition.Explode;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
 import ua.angrybeavers.material.em.R;
 
 public class ActivityTransitionStage extends Activity {
+
+    private Button _buttonSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,9 @@ public class ActivityTransitionStage extends Activity {
         if (actionBar != null) {
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }
+
+
+
     }
 
     @Override
