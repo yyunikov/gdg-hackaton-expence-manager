@@ -27,4 +27,14 @@
 
     <string name="about_info">Specially for GDG Lviv Hackaday 2014</string>
 
+    <string name="new_expenses_group">New Expenses Group</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="currency">Currency</string>
+    <string name="initial_balance">Description</string>
+    <string name="auto_and_mileage">Auto and Mileage</string>
+
 </resources>
