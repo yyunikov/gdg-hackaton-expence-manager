@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="apptheme">#009688</color>
+
+    <color name="apptheme_dark">#ff00736a</color>
+
+    <color name="apptheme_accent">#ffdae92d</color>
+
+    <color name="add_button_color">#ffff5699</color>
+
+    <color name="drawer_divider">#ffcecece</color>
+
+    <color name="drawer_shadow">#30000000</color>
+
+    <color name="drawer_color">#FFFFFF</color>
+
+</resources>

@@ -1,0 +1,30 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="action_bar_height">56dp</dimen>
+    <dimen name="action_bar_text_size">14sp</dimen>
+
+    <dimen name="text_size_big">20sp</dimen>
+
+    <!-- Drawer dimensions -->
+    <dimen name="drawer_width">280dp</dimen>
+    <dimen name="drawer_divider_margin_top">7dp</dimen>
+    <dimen name="drawer_divider_margin_bottom">8dp</dimen>
+    <dimen name="drawer_divider">1dp</dimen>
+
+    <!-- Drawer Arrow dimensions -->
+    <dimen name="drawer_drawable_size">50dp</dimen>
+    <dimen name="drawer_bar_size">18dp</dimen>
+    <dimen name="drawer_top_bottom_bar_arrow_size">11dp</dimen>
+    <dimen name="drawer_thickness">2dp</dimen>
+    <dimen name="drawer_gap_between_bars">3dp</dimen>
+    <dimen name="drawer_middle_bar_arrow_size">16dp</dimen>
+
+    <!-- Add button dimensions -->
+    <dimen name="add_button_margin">32dp</dimen>
+    <dimen name="round_button_diameter">64dp</dimen>
+    <dimen name="elevation_low">1dp</dimen>
+    <dimen name="elevation_high">4dp</dimen>
+
+</resources>

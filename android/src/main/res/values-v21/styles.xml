@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AngryB.Theme" parent="android:Theme.Material.Light" />
+
+    <style name="AngryB.Theme.Light" parent="AngryB.Theme">
+        <item name="android:colorPrimary">@color/apptheme</item>
+        <item name="android:colorPrimaryDark">@color/apptheme_dark</item>
+        <item name="android:colorAccent">@color/apptheme_accent</item>
+        <item name="android:colorControlHighlight">@color/apptheme_accent</item>
+        <item name="android:navigationBarColor">@color/apptheme_dark</item>
+
+        <item name="android:textViewStyle">@style/Widget.AngryB.TextView</item>
+        <item name="android:actionOverflowButtonStyle">@style/Widget.AngryB.ActionButton.Overflow</item>
+        <item name="android:actionBarStyle">@style/Widget.AngryB.ActionBar</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_ab_up</item>
+
+        <!--activity animation settings-->
+        <item name="android:windowContentTransitions">true</item>
+        <!-- Flag indicating whether this Window's transition should overlap with
+             the exiting transition of the calling Activity. -->
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <!--Flag indicating whether this Window's transition should overlap with
+             the exiting transition of the called Activity when the called Activity
+             finishes. -->
+        <item name="android:windowAllowExitTransitionOverlap">true</item>
+        <!-- Flag indicating whether this window's Action Bar should overlay -->
+        <item name="android:windowActionBarOverlay">false</item>
+    </style>
+
+    <style name="Widget.AngryB.TextView" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif</item>
+        <!-- Roboto regular -->
+    </style>
+
+    <style name="Widget.AngryB.ActionButton.Overflow" parent="android:Widget.Material.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_ab_overflow</item>
+    </style>
+
+    <style name="Widget.AngryB.ActionBar" parent="android:Widget.Material.ActionBar">
+        <item name="android:background">@color/apptheme</item>
+        <item name="android:titleTextStyle">@style/Widget.AngryB.ActionBarTitleText</item>
+    </style>
+
+    <style name="Widget.AngryB.ActionBarTitleText" parent="android:TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/action_bar_text_size</item>
+    </style>
+
+</resources>
