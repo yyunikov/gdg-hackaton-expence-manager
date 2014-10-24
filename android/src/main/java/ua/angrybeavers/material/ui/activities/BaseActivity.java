@@ -30,7 +30,6 @@ import ua.angrybeavers.material.R;
 import ua.angrybeavers.material.ui.adapters.NavigationDrawerAdapter;
 import ua.angrybeavers.material.ui.drawer.ActionBarDrawerToggle;
 import ua.angrybeavers.material.ui.drawer.DrawerArrowDrawable;
-import ua.angrybeavers.material.ui.items.DrawerItemDivider;
 import ua.angrybeavers.material.ui.items.DrawerItemPrimary;
 
 /**
@@ -149,11 +148,13 @@ public abstract class BaseActivity extends Activity {
     private void setDrawerAdapter() {
         final NavigationDrawerAdapter adapter = new NavigationDrawerAdapter(this);
 
-        adapter.add(new DrawerItemPrimary("RecyclerView and Floating Button"));
-        adapter.add(new DrawerItemDivider());
-        adapter.add(new DrawerItemPrimary("Activity Transition"));
-        adapter.add(new DrawerItemPrimary("View Stage Transition"));
-        adapter.add(new DrawerItemPrimary("Reveal Effect"));
+        adapter.add(new DrawerItemPrimary("Account"));
+        adapter.add(new DrawerItemPrimary("Reminder"));
+        adapter.add(new DrawerItemPrimary("Note"));
+        adapter.add(new DrawerItemPrimary("Tools"));
+        adapter.add(new DrawerItemPrimary("Settings"));
+        adapter.add(new DrawerItemPrimary("Pro Edition"));
+        adapter.add(new DrawerItemPrimary("About"));
 
         mDrawerList.setAdapter(adapter);
     }
@@ -170,17 +171,9 @@ public abstract class BaseActivity extends Activity {
                     intent = new Intent(BaseActivity.this, RecyclerViewActivity.class).
                             addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK
                                     | Intent.FLAG_ACTIVITY_SINGLE_TOP); break;
-                case 2:
-                    intent = new Intent(BaseActivity.this, ActivityTransition.class).
-                            addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP); break;
-                case 3:
-                    intent = null;
-                    break;
-                case 4:
-                    intent = null;
-                    break;
                 default:
-                    throw new IllegalArgumentException("Invalid position specified!");
+                    intent = null;
+                    break;
             }
 
             mDrawerLayout.closeDrawer(mDrawerList);

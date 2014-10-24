@@ -23,12 +23,14 @@ import android.widget.TextView;
 import ua.angrybeavers.material.R;
 import ua.angrybeavers.material.ui.items.RecyclerViewItem;
 
+import java.util.List;
+
 /**
  * @author yyunikov
  */
 public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
-    private RecyclerViewItem[] mDataset;
+    private List<RecyclerViewItem> mDataset;
 
     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
@@ -51,7 +53,7 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public RecyclerViewAdapter(final RecyclerViewItem[] dataset) {
+    public RecyclerViewAdapter(final List<RecyclerViewItem> dataset) {
         mDataset = dataset;
     }
 
@@ -74,13 +76,13 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.mTitleView.setText(mDataset[position].getTitle());
-        holder.mSubTitleView.setText(mDataset[position].getSubTitle());
+        holder.mTitleView.setText(mDataset.get(position).getTitle());
+        holder.mSubTitleView.setText(mDataset.get(position).getSubTitle());
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mDataset.size();
     }
 }

@@ -27,6 +27,9 @@ import ua.angrybeavers.material.R;
 import ua.angrybeavers.material.ui.adapters.RecyclerViewAdapter;
 import ua.angrybeavers.material.ui.items.RecyclerViewItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RecyclerViewActivity extends BaseActivity {
 
     private static final int DATASET_SIZE = 1000;
@@ -82,7 +85,7 @@ public class RecyclerViewActivity extends BaseActivity {
         });
     }
 
-    private class InitializingTask extends AsyncTask<Void, Void, RecyclerViewItem[]> {
+    private class InitializingTask extends AsyncTask<Void, Void, List<RecyclerViewItem>> {
 
         @Override
         protected void onPreExecute() {
@@ -91,10 +94,10 @@ public class RecyclerViewActivity extends BaseActivity {
         }
 
         @Override
-        protected RecyclerViewItem[] doInBackground(final Void... voids) {
+        protected List<RecyclerViewItem> doInBackground(final Void... voids) {
             // intentionally sleeping to show progress bar
             try {
-                Thread.sleep(4000);
+                Thread.sleep(3000);
             } catch (final InterruptedException e) {
                 Log.e(RecyclerViewActivity.class.getName(), "Thread was interrupted!");
             }
@@ -103,20 +106,18 @@ public class RecyclerViewActivity extends BaseActivity {
         }
 
         @Override
-        protected void onPostExecute(final RecyclerViewItem[] aVoid) {
+        protected void onPostExecute(final List<RecyclerViewItem> aVoid) {
             super.onPostExecute(aVoid);
 
-            final RecyclerView.Adapter adapter = new RecyclerViewAdapter(createDataSet());
+            final RecyclerView.Adapter adapter = new RecyclerViewAdapter(aVoid);
             recyclerView.setAdapter(adapter);
             setProgressBarVisible(false);
         }
 
-        private RecyclerViewItem[] createDataSet() {
-            final RecyclerViewItem[] recyclerViewItems = new RecyclerViewItem[DATASET_SIZE];
+        private List<RecyclerViewItem> createDataSet() {
+            final List<RecyclerViewItem> recyclerViewItems = new ArrayList<>();
 
-            for (int i = 0; i < DATASET_SIZE; i++) {
-                recyclerViewItems[i] = new RecyclerViewItem("Title " + i, "Subtitle " + i);
-            }
+            recyclerViewItems.add(new RecyclerViewItem("Personal Expense", "Current Balance: "));
 
             return recyclerViewItems;
         }
