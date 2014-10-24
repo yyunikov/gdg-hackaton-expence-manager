@@ -19,9 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@color/expense_buttons_color_blue"
+            android:background="@drawable/button_selector_blue"
             android:drawableLeft="@drawable/align_center_48"
-            android:onClick="onButtonClick"
             android:padding="10dp"
             android:text="Summary"
             android:textColor="@color/expense_buttons_color_white" />
@@ -32,10 +31,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_toEndOf="@id/personal_expense_details_summary_btn"
-            android:background="@color/expense_buttons_color_orange"
+            android:background="@drawable/button_selector_orange"
             android:padding="10dp"
             android:text="Budget"
-
             android:textColor="@android:color/white" />
 
         <Button
@@ -43,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_toEndOf="@+id/personal_expense_details_budget_btn"
-            android:background="@color/expense_buttons_color_deep_perple"
+            android:background="@drawable/button_selector_deep_perple"
             android:text="Activity"
             android:textColor="@android:color/white" />
 
@@ -227,7 +225,6 @@
         android:id="@+id/card_vieew_element_3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:elevation="2dp"
         android:layout_below="@+id/card_vieew_element_2"
         android:background="@color/expense_buttons_color_red">
 
@@ -360,7 +357,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@color/expense_buttons_color_teal"
+            android:background="@drawable/button_selector_teal"
             android:drawableLeft="@drawable/document_48"
             android:padding="10dp"
             android:text="Recruting"
@@ -372,7 +369,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_toEndOf="@id/personal_expense_details_summary_btn_2"
-            android:background="@color/expense_buttons_color_green"
+            android:background="@drawable/button_selector_green"
             android:padding="10dp"
             android:text="Income"
             android:textColor="@android:color/white" />
@@ -382,7 +379,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_toEndOf="@+id/personal_expense_details_budget_btn_2"
-            android:background="@color/expense_buttons_color_red"
+            android:background="@drawable/button_selector_red"
             android:padding="10dp"
             android:text="Expense"
             android:textColor="@android:color/white" />
@@ -401,7 +398,6 @@
         android:id="@+id/card_vieew_element_3_4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:elevation="2dp"
         android:layout_below="@+id/personal_expense_details_line_3_4"
         android:background="@color/expense_buttons_color_red">
 
@@ -694,7 +690,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@color/expense_buttons_color_brown"
+            android:background="@drawable/button_selector_brown"
             android:drawableLeft="@drawable/calendar_48"
             android:padding="10dp"
             android:text="Calendar"
@@ -706,7 +702,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_toEndOf="@id/personal_expense_details_summary_btn_2_5"
-            android:background="@color/expense_buttons_color_grey"
+            android:background="@drawable/button_selector_grey"
             android:padding="10dp"
             android:text="Chart"
             android:textColor="@android:color/white" />
@@ -716,7 +712,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_toEndOf="@+id/personal_expense_details_budget_btn_2_5"
-            android:background="@color/expense_buttons_color_light_lime"
+            android:background="@drawable/button_selector_lime"
             android:padding="10dp"
             android:text="Transfet"
             android:textColor="@android:color/white" />
