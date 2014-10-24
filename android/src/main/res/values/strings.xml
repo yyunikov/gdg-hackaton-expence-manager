@@ -13,6 +13,8 @@
 
     <string name="activity_stage_title">Activity Transition Stage</string>
 
+    <string name="activity_account">Account</string>
+
     <string name="first_activity">First Activity</string>
 
     <string name="second_activity">Second Activity</string>

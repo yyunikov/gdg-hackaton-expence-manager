@@ -35,7 +35,7 @@ import ua.angrybeavers.material.em.ui.items.DrawerItemPrimary;
 /**
  * @author yyunikov
  */
-public abstract class BaseActivity extends Activity {
+public abstract class AccountActivity extends Activity {
 
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
@@ -91,7 +91,7 @@ public abstract class BaseActivity extends Activity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeButtonEnabled(true);
-            actionBar.setTitle(R.string.app_name);
+            actionBar.setTitle(R.string.activity_account);
         }
     }
 
@@ -152,7 +152,6 @@ public abstract class BaseActivity extends Activity {
         adapter.add(new DrawerItemPrimary("Reminder"));
         adapter.add(new DrawerItemPrimary("Note"));
         adapter.add(new DrawerItemPrimary("Tools"));
-        adapter.add(new DrawerItemPrimary("Settings"));
         adapter.add(new DrawerItemPrimary("Pro Edition"));
         adapter.add(new DrawerItemPrimary("About"));
 
@@ -168,7 +167,7 @@ public abstract class BaseActivity extends Activity {
 
             switch (position) {
                 case 0:
-                    intent = new Intent(BaseActivity.this, RecyclerViewActivity.class).
+                    intent = new Intent(AccountActivity.this, RecyclerViewActivity.class).
                             addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK
                                     | Intent.FLAG_ACTIVITY_SINGLE_TOP); break;
                 default:

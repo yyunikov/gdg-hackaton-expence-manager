@@ -30,7 +30,7 @@ import ua.angrybeavers.material.em.ui.items.RecyclerViewItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerViewActivity extends BaseActivity {
+public class RecyclerViewActivity extends AccountActivity {
 
     private static final int DATASET_SIZE = 1000;
 
