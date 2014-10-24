@@ -18,5 +18,5 @@ package ua.angrybeavers.material.em.ui.activities;
 /**
  * @author yyunikov
  */
-public class AboutActivity extends AccountActivity {
+public class AboutActivity extends BaseActivity {
 }
