@@ -21,10 +21,6 @@
 
         <activity android:name=".ui.activities.AboutActivity"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".ui.activities.ActivityTransition"
-                  android:screenOrientation="portrait"/>
-        <activity android:name=".ui.activities.ActivityTransitionStage"
-                  android:screenOrientation="portrait"/>
         <activity android:name=".ui.activities.ExpenseDetailsActivity"
                   android:screenOrientation="portrait"/>
         <activity android:name=".ui.activities.NewExpenseActivity"

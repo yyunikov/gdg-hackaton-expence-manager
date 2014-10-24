@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.transition.Explode;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-
 import ua.angrybeavers.material.em.R;
 
 public class ExpenseDetailsActivity extends Activity {
@@ -22,23 +20,6 @@ public class ExpenseDetailsActivity extends Activity {
         setContentView(R.layout.expense_details_layout);
 
         setupActionBar();
-
-
-        Button buttonSummary = (Button) findViewById(R.id.personal_expense_details_summary_btn);
-        buttonSummary.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        Button buttonBudget = (Button) findViewById(R.id.personal_expense_details_budget_btn);
-        buttonSummary.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
 
         findViewById(R.id.btnAddExpense).setOnClickListener(new View.OnClickListener() {
             @Override
